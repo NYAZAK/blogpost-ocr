@@ -1,12 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="col-8 mx-auto mt-5">
-<ul class="list-group" *ngFor="let post of posts">
-    <li class="list-group-item" [ngClass]="post.loveIts > 0 ?  'list-group-item-success'  :  'list-group-item-danger' " >
-        <h2>{{post.title}}</h2>
-        <p>{{post.content}}</p>
-        <button type="button" class="btn btn-success mr-2">{{loveIt}}</button>
-        <button type="button" class="btn btn-danger">{{dontLoveIt}}</button>
-    </li>
-</ul>
+    <app-post-list  *ngFor="let post of posts" [post]='post'></app-post-list>
 </div>
 <router-outlet></router-outlet>

@@ -31,9 +31,6 @@ export class AppComponent {
       loveIts: 0,
       created_at: new Date()
      }
-
   ];
 
-  loveIt: string = 'Love It';
-  dontLoveIt: string = 'Don\'t love it';
 }
