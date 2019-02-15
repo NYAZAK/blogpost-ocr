@@ -13,13 +13,13 @@ export class AppComponent {
      1- Do a flip!
      2- Bender, hurry! This fuel's expensive! Also, we're dying!
      3- Hey, guess what you're accessories to.`,
-    loveIts : 1,
+    loveIts : 0,
     created_at: new Date() },
      {
       title: 'And I\'m his friend Jesus.',
       content: `In our darkest hour, we can stand erect, with proud upthrust bosoms. I'll get my kit! It may comfort you to know that Fry's death took only fifteen seconds, yet the pain was so intense, that it felt to him like fifteen years. And it goes without saying, it caused him to empty his bowels.
                   Or a guy who burns down a bar for the insurance money! Hey, tell me something. You've got all this money. How come you always dress like you're doing your laundry? And when we woke up, we had these bodies.`,
-      loveIts: 3,
+      loveIts: 0,
       created_at: new Date()
      },
      {

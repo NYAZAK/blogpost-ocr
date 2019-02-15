@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Post } from 'src/app/shared/post.model';
 
 @Component({
@@ -7,19 +7,29 @@ import { Post } from 'src/app/shared/post.model';
   styleUrls: ['./post-list-item.component.css']
 })
 export class PostListItemComponent implements OnInit {
- @Input() public post: Post[];
- loveIt: string = 'Love It';
- dontLoveIt: string = 'Don\'t love it';
+ @Input() public post: Post;
+//  @Output('loveevent') public loveIt = new EventEmitter();
+
+ loveItbtn: string = 'Love It';
+ dontLoveItbtn: string = 'Don\'t love it';
+
   constructor() { }
 
   ngOnInit() {
+    console.log(this.post);
   }
 
   loveit(){
-  
+    this.post.loveIts++;
+    // this.loveIt.emit({
+    //   value: this.post.loveIts
+    // })
   }
 
   dontloveit(){
-
+    this.post.loveIts--;
+    // this.loveIt.emit({
+    //   value: this.post.loveIts
+    // })
   }
 }

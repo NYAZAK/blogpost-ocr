@@ -1,9 +1,12 @@
 <li class="list-group-item mb-1" [ngClass]="post.loveIts > 0 ?  'list-group-item-success'  :  'list-group-item-danger' " >
-    <div class="card-header row col-12"> 
+    <div class="card-header row col-12 mx-auto"> 
     <h2  class=" col-6">{{post.title}}</h2>
    <p class="text-right col-6 h6">{{post.created_at | date:'short'}}</p>
   </div> 
     <p>{{post.content}}</p>
-    <button type="button" class="btn btn-success mr-2" (click)="loveit()">{{loveIt}}</button>
-    <button type="button" class="btn btn-danger" (click)="dontloveit()">{{dontLoveIt}}</button>
+    <div class="row col-12 card-footer mx-auto">
+    <button type="button" class="btn btn-success mr-2" (click)="loveit()">{{loveItbtn}}</button>
+    <button type="button" class="btn btn-danger" (click)="dontloveit()">{{dontLoveItbtn}}</button>
+    <p class="col-6 text-right">{{post.loveIts}} &#x2661; </p>
+  </div>
 </li>
