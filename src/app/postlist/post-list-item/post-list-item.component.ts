@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Post } from 'src/app/shared/post.model';
+import { Post } from 'src/app/shared/models/post.model';
 
 @Component({
   selector: 'app-post-list-item',
