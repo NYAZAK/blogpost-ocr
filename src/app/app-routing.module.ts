@@ -6,7 +6,7 @@ import { NewpostComponent } from './postlist/newpost/newpost.component';
 const routes: Routes = [
   {path: 'post', component: PostListComponent},
   {path: 'new', component: NewpostComponent},
-  {path: ' ',  redirectTo: '/post', pathMatch:"full"},
+  {path: '',  redirectTo: '/post', pathMatch:"full"},
 ];
 
 @NgModule({
