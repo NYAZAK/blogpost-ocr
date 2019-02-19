@@ -8,9 +8,19 @@
    <p class="text-right col-6 h6">{{post.created_at | date:'short'}}</p>
   </div> 
     <p>{{post.content}}</p>
-    <div class="row col-12 card-footer mx-auto">
-    <button type="button" class="btn btn-success mr-2" (click)="loveit()">{{loveItbtn}}</button>
-    <button type="button" class="btn btn-danger" (click)="dontloveit()">{{dontLoveItbtn}}</button>
-    <p class="col-6 text-right">{{post.loveIts}} &#x2661; </p>
-  </div>
+  <div class="row col-12 card-footer mx-auto">
+    <div class="col-6 mr-auto row">
+      <button type="button" class="btn btn-success mr-2 btn-sm" (click)="loveit()">{{loveItbtn}}</button>
+      <button type="button" class="btn btn-danger btn-sm" (click)="dontloveit()">{{dontLoveItbtn}}</button>
+      <p class="col-2">{{post.loveIts}} &#x2661;</p>
+      </div>
+      <div class="col-6 ml-auto row">
+          <div class="ml-auto">
+              <a class="btn btn-info" type="btn" routerLink="/new">Nou.Poste</a>
+          </div>
+          <div class="ml-1">
+              <span class="close text-danger">&times;</span>
+          </div>
+      </div>
+  </div>    
 </li>
