@@ -42,4 +42,8 @@ private posts: Post[] = [
     return this.postSubject.next(this.posts);
   }
 
+
+  newPost(f){
+   return this.posts.push(f);
+  }
 }
