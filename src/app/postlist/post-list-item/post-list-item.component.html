@@ -1,4 +1,10 @@
-<li class="list-group-item mb-1" [ngClass]="post.loveIts > 0 ?  'list-group-item-success'  :  'list-group-item-danger' " >
+<li class="list-group-item mb-1" ngClass="{ 
+  'list-group-item' : true,
+  'list-group-item-success' :post.loveits > 0,
+  'list-group-item-danger ': post.loveits < 0,
+}" 
+ >
+ <!-- "post.loveIts > 0 ?  'list-group-item-success'  :  'list-group-item-danger' " -->
     <div class="card-header row col-12 mx-auto"> 
     <h2  class=" col-6">{{post.title}}</h2>
    <p class="text-right col-6 h6">{{post.created_at | date:'short'}}</p>
