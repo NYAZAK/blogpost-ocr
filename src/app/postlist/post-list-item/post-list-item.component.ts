@@ -16,7 +16,7 @@ export class PostListItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.post);
+    console.log(this.post.loveIts);
   }
 
   loveit(){
