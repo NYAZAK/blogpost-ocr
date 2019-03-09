@@ -11,6 +11,7 @@
     <div class="row col-12 card-footer mx-auto">
     <button type="button" class="btn btn-success mr-2" (click)="loveit()">{{loveItbtn}}</button>
     <button type="button" class="btn btn-danger" (click)="dontloveit()">{{dontLoveItbtn}}</button>
-    <p class="col-6 text-right">{{post.loveIts}} &#x2661; </p>
+    <p class="col-6 pt-3">{{post.loveIts}} &#x2661; </p>
+    <span  (click)="deletePost()"  class="closer h1 ml-5">&times;</span>
   </div>
 </li>

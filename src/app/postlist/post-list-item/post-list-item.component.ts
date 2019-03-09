@@ -14,6 +14,7 @@ export class PostListItemComponent implements OnInit {
  dontLoveItbtn: string = 'Don\'t love it';
 
   constructor() { }
+  // todo creer un service et mettre en place deux methodes supprimer le poste et envoyer le nombre de likes de chaque poste
 
   ngOnInit() {
     console.log(this.post.loveIts);
@@ -31,5 +32,9 @@ export class PostListItemComponent implements OnInit {
     // this.loveIt.emit({
     //   value: this.post.loveIts
     // })
+  }
+
+  deletePost(){
+    
   }
 }
