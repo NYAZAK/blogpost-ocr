@@ -7,6 +7,7 @@ import { PostListComponent } from './postlist/post-list/post-list.component';
 import { PostListItemComponent } from './postlist/post-list-item/post-list-item.component';
 import { NewpostComponent } from './postlist/newpost/newpost.component';
 import { NavbarComponent } from './header/navbar/navbar.component';
+import { PostsService } from './shared/services/posts.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,7 @@ import { NavbarComponent } from './header/navbar/navbar.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
