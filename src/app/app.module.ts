@@ -10,12 +10,8 @@ import { AngularFireModule, FirebaseAppConfig } from '@angular/fire';
 import { AngularFireDatabaseModule } from "@angular/fire/database";
 
 const config: FirebaseAppConfig =  
-  {  apiKey: "AIzaSyAU6GXZwkwB7RNXTvCeAVAlXwUETfsueHg",
-    authDomain: "posttpopenclassroom.firebaseapp.com",
-    databaseURL: "https://posttpopenclassroom.firebaseio.com",
-    projectId: "posttpopenclassroom",
-    storageBucket: "posttpopenclassroom.appspot.com",
-    messagingSenderId: "338363363206"
+  {  
+    
   }; 
 
 @NgModule({
