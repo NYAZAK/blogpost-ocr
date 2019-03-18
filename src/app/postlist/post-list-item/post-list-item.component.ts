@@ -1,5 +1,8 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Post } from 'src/app/shared/models/post.model';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Observable } from 'rxjs';
+import { PostsService } from 'src/app/shared/services/posts.service';
 
 @Component({
   selector: 'app-post-list-item',
@@ -7,29 +10,35 @@ import { Post } from 'src/app/shared/models/post.model';
   styleUrls: ['./post-list-item.component.css']
 })
 export class PostListItemComponent implements OnInit {
- @Input() public post: Post;
+public posts;
 //  @Output('loveevent') public loveIt = new EventEmitter();
 
- loveItbtn: string = 'Love It';
- dontLoveItbtn: string = 'Don\'t love it';
-
-  constructor() { }
+  constructor(private afdb: AngularFireDatabase, private PostS: PostsService) { }
 
   ngOnInit() {
-    console.log(this.post);
+  
+   this.posts =  this.PostS.getAllPosts();
+    console.log(this.posts.id, "idex");
   }
 
   loveit(){
-    this.post.loveIts++;
+    this.posts.loveIts++;
     // this.loveIt.emit({
     //   value: this.post.loveIts
     // })
   }
 
   dontloveit(){
-    this.post.loveIts--;
+    this.posts.loveIts--;
     // this.loveIt.emit({
     //   value: this.post.loveIts
     // })
   }
+
+
+  deletepost(post){
+    console.log(post, 'id');
+   this.PostS.deletepost(post.key);
+  }
+
 }

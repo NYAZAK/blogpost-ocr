@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PostListComponent } from './post-list/post-list.component';
 import { PostListItemComponent } from './post-list-item/post-list-item.component';
 import { NewpostComponent } from './newpost/newpost.component';
-
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 const COMPONENTS = [
   PostListComponent,
   PostListItemComponent,
@@ -15,7 +15,9 @@ const COMPONENTS = [
     COMPONENTS
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     COMPONENTS

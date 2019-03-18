@@ -1,4 +1,4 @@
-<li class="list-group-item mb-1" 
+<li  *ngFor="let post of posts | async; let id = index" class="list-group-item mb-1" 
 [ngClass]="{
   'list-group-item': true,
   'list-group-item-success': post.loveIts > 0,
@@ -10,18 +10,19 @@
     <p>{{post.content}}</p>
   <div class="row col-12 card-footer mx-auto">
     <div class="col-6 mr-auto row">
-      <button type="button" class="btn btn-success mr-2 btn-sm" (click)="loveit()">{{loveItbtn}}</button>
-      <button type="button" class="btn btn-danger btn-sm" (click)="dontloveit()">{{dontLoveItbtn}}</button>
+      <button type="button" class="btn btn-success mr-2 btn-sm" (click)="loveit()">like</button>
+      <button type="button" class="btn btn-danger btn-sm" (click)="dontloveit()">dislike</button>
       <p class="col-2">{{post.loveIts}} &#x2661;</p>
       </div>
       <div class="col-6 ml-auto row">
           <div class="ml-auto">
-              <!--todo ajouter la possibilité d'ajouter des commentaires  -->
+            
               <a class="btn btn-info" type="btn" routerLink="/new">Nou.Poste</a>
           </div>
           <div class="ml-1">
-              <span class="close text-danger">&times;</span>
+              <span class="close text-danger" (click)="deletepost(post)">&times;</span>
           </div>
       </div>
   </div>    
-</li>
+</li> 
+{{posts | async | json}}
