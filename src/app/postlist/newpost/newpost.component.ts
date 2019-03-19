@@ -16,24 +16,16 @@
     constructor(private PService: PostsService, private fb: FormBuilder) { }
     ngOnInit() {
       this.createPost();
-      this.PService.postSubject.subscribe(data => 
-        {
-        this.NewPostForm.get('title').patchValue(this.mypost.title),
-        this.NewPostForm.get('content').patchValue(this.mypost.content),
-        this.NewPostForm.get('loveIts').patchValue(this.mypost.loveIts),
-        this.NewPostForm.get('created_at').patchValue(this.mypost.created_at),
-        this.NewPostForm.get('key').patchValue(this.mypost.key)
-        });
+      // this.PService.postSubject.subscribe(data => 
+      //   {
+      //   this.NewPostForm.get('title').patchValue(this.mypost.title),
+      //   this.NewPostForm.get('content').patchValue(this.mypost.content),
+      //   this.NewPostForm.get('loveIts').patchValue(this.mypost.loveIts),
+      //   this.NewPostForm.get('created_at').patchValue(this.mypost.created_at),
+      //   this.NewPostForm.get('key').patchValue(this.mypost.key)
+      //   });
     }
-    onQuoteCreated(quote) {
-      console.log('onQuoteCreated', quote.value);
-      let addedQuote = this.PService.newPost({ 
-        title: quote.value.firstname, 
-        lastname: quote.value.lastname, 
-        text: quote.value.quote });
-      console.log('addedQuote', addedQuote);
-    }
-
+  
     createPost(){
       this.NewPostForm = this.fb.group({
       title: ['', Validators.required],

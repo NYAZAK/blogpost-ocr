@@ -11,7 +11,6 @@ import { PostsService } from 'src/app/shared/services/posts.service';
 })
 export class PostListItemComponent implements OnInit {
 public posts;
-//  @Output('loveevent') public loveIt = new EventEmitter();
 
   constructor(private afdb: AngularFireDatabase, private PostS: PostsService) { }
 
@@ -23,16 +22,10 @@ public posts;
 
   loveit(){
     this.posts.loveIts++;
-    // this.loveIt.emit({
-    //   value: this.post.loveIts
-    // })
   }
 
   dontloveit(){
     this.posts.loveIts--;
-    // this.loveIt.emit({
-    //   value: this.post.loveIts
-    // })
   }
 
 
